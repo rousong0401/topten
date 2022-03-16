@@ -41,7 +41,7 @@
   const scrollToTop = () => {
     // 滑動到特定區塊時顯示 scrollTop
     $(window).scroll(function () {
-      if ($(window).scrollTop() > $('#title-5').offset().top) {
+      if ($(window).scrollTop() > $('#title-4').offset().top) {
         $('.scroll-top').addClass('is-active');
       } else {
         $('.scroll-top').removeClass('is-active');
@@ -150,70 +150,70 @@
 })(jQuery);
 
 // 解構取出 VeeValidate 方法
-const { defineRule, Form, Field, ErrorMessage, configure } = VeeValidate;
-const { required, email, min, max } = VeeValidateRules;
-const { localize, loadLocaleFromURL } = VeeValidateI18n;
+// const { defineRule, Form, Field, ErrorMessage, configure } = VeeValidate;
+// const { required, email, min, max } = VeeValidateRules;
+// const { localize, loadLocaleFromURL } = VeeValidateI18n;
 
-// rules
-defineRule('required', required);
-defineRule('email', email);
-defineRule('min', min);
-defineRule('max', max);
+// // rules
+// defineRule('required', required);
+// defineRule('email', email);
+// defineRule('min', min);
+// defineRule('max', max);
 
-// 語言i18n
-loadLocaleFromURL('./zh_TW.json');
+// // 語言i18n
+// loadLocaleFromURL('./zh_TW.json');
 
-configure({
-  generateMessage: localize('zh_TW'),
-  validateOnInput: true, // input輸入字元立即進行驗證
-});
+// configure({
+//   generateMessage: localize('zh_TW'),
+//   validateOnInput: true, // input輸入字元立即進行驗證
+// });
 
-const app = Vue.createApp({
-  data() {
-    return {
-      form: {
-        user: {
-          name: '',
-          email: '',
-          tel: '',
-          recommend: '',
-        }
-      },
-    }
-  },
-  components: {
-    VForm: Form,
-    VField: Field,
-    ErrorMessage: ErrorMessage,
-  },
-  methods: {
-    sendForm() {
-      const nowTime = new Date();
-      const data = {
-        'source': 'WEB',
-        ...this.form.user, // 展開
-        'time': `${nowTime.getMonth() + 1}/${nowTime.getDate()}${nowTime.getHours()}:${nowTime.getMinutes()}`,
-      };
-      $.ajax({
-        url: 'https://script.google.com/macros/s/AKfycbx21XiSgH7Vd76HRsIKlcQYq4cIYj8Y_2VpyXN7eevZ3C0S9S7SIGdVqO-jfjuj6tzE/exec',
-        data,
-        success: function (res) {
-          if (res === '成功') {
-            Swal.fire('成功');
-          }
-        },
-      });
-      this.$refs.form.resetForm(); // 清空 form 表單內容，套件用法
-    },
-    isEmail(value) { // 判斷 email 是否符合正規表達式
-      const email = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      return email.test(value) ? true : '請填寫正確的E-mail'
-    },
-    isPhone(value) { // 判斷電話是否符合正規表達式
-      const phoneNumber = /^(09)[0-9]{8}$/;
-      return phoneNumber.test(value) ? true : '請輸入正確的電話號碼'
-    },
-  }
-});
+// const app = Vue.createApp({
+//   data() {
+//     return {
+//       form: {
+//         user: {
+//           name: '',
+//           email: '',
+//           tel: '',
+//           recommend: '',
+//         }
+//       },
+//     }
+//   },
+//   components: {
+//     VForm: Form,
+//     VField: Field,
+//     ErrorMessage: ErrorMessage,
+//   },
+//   methods: {
+//     sendForm() {
+//       const nowTime = new Date();
+//       const data = {
+//         'source': 'WEB',
+//         ...this.form.user, // 展開
+//         'time': `${nowTime.getMonth() + 1}/${nowTime.getDate()}${nowTime.getHours()}:${nowTime.getMinutes()}`,
+//       };
+//       $.ajax({
+//         url: 'https://script.google.com/macros/s/AKfycbx21XiSgH7Vd76HRsIKlcQYq4cIYj8Y_2VpyXN7eevZ3C0S9S7SIGdVqO-jfjuj6tzE/exec',
+//         data,
+//         success: function (res) {
+//           if (res === '成功') {
+//             Swal.fire('成功');
+//           }
+//         },
+//       });
+//       this.$refs.form.resetForm(); // 清空 form 表單內容，套件用法
+//     },
+//     isEmail(value) { // 判斷 email 是否符合正規表達式
+//       const email = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//       return email.test(value) ? true : '請填寫正確的E-mail'
+//     },
+//     isPhone(value) { // 判斷電話是否符合正規表達式
+//       const phoneNumber = /^(09)[0-9]{8}$/;
+//       return phoneNumber.test(value) ? true : '請輸入正確的電話號碼'
+//     },
+//   }
+// });
 
-app.mount('#app');
+// app.mount('#app');
