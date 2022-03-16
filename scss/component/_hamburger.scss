@@ -1,0 +1,71 @@
+.hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: 3px solid $warning;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow-x: hidden;
+  @include mq(md) {
+    top: 2.5rem;
+    right: 2.5rem;
+    width: 64px;
+    height: 64px;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .3s;
+    width: 20px;
+    height: 3px;
+    background-color: $warning;
+    border-radius: 3px;
+    @include mq(md) {
+      width: 30px;
+    }
+    &:first-child {
+      margin-top: -0.5rem;
+      @include mq(md) {
+        margin-top: -0.625rem;
+      }
+    }
+    &:last-child {
+      margin-top: 0.5rem;
+      @include mq(md) {
+        margin-top: 0.625rem;
+      }
+    }
+  }
+  &:hover {
+    span {
+      &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+  }
+  &.is-active {
+    border: none;
+      span {
+        @include mq($until:md) {
+          width: 36px;
+      }
+      &:first-child {
+        margin-top: 0;
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: translate(100%,-50%);
+        opacity: 0;
+      }
+      &:last-child {
+        margin-top: 0;
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+  }
+}

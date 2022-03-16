@@ -1,0 +1,49 @@
+@each $gapKey, $gapValue in $gap {
+  .g-#{$gapKey} {
+    margin-left: -$gapValue;
+    margin-bottom: -$gapValue;
+    > * {
+      padding-left: $gapValue;
+      padding-bottom: $gapValue;
+    }
+  }
+  .gx-#{$gapKey} {
+    margin-left: -$gapValue;
+    > * {
+      padding-left: $gapValue;
+    }
+  }
+  .gy-#{$gapKey} {
+    margin-bottom: -$gapValue;
+    > * {
+      padding-bottom: $gapValue;
+    }
+  }
+}
+
+@each $key, $value in $mq-breakpoints {
+  @include mq(#{$key}) {
+    @each $gapKey, $gapValue in $gap {
+      .#{$key}\:g-#{$gapKey} {
+        margin-left: -$gapValue;
+        margin-bottom: -$gapValue;
+        > * {
+          padding-left: $gapValue;
+          padding-bottom: $gapValue;
+        }
+      }
+      .#{$key}\:gx-#{$gapKey} {
+        margin-left: -$gapValue;
+        > * {
+          padding-left: $gapValue;
+        }
+      }
+      .#{$key}\:gy-#{$gapKey} {
+        margin-bottom: -$gapValue;
+        > * {
+          padding-bottom: $gapValue;
+        }
+      }
+    }
+  }
+}

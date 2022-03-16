@@ -1,0 +1,6 @@
+footer {
+  background-color: $green-100;
+  @include mq(md) {
+    background-image: linear-gradient(180deg, #004A4F 0%, #00333E 100%);
+  }
+}

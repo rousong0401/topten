@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-icon-fb">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="icon-fb" clip-path="url(#clip-icon-fb)">
+    <path id="facebook-brands" d="M38,23.091A15,15,0,1,0,20.656,38V27.454h-3.81V23.091h3.81V19.766c0-3.782,2.238-5.871,5.666-5.871a22.949,22.949,0,0,1,3.358.295V17.9H27.788a2.175,2.175,0,0,0-2.444,2.357v2.833H29.5l-.665,4.362H25.344V38A15.069,15.069,0,0,0,38,23.091Z" transform="translate(-8 -8)" fill="#fff"/>
+  </g>
+</svg>

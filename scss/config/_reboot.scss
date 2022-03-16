@@ -1,0 +1,21 @@
+body{
+  font-family: 'Noto Serif TC' , sans-serif;
+  font-weight: 600;
+  color: $green-200;
+  overflow-x: hidden;
+}
+
+input:focus,button:focus,textarea:focus,select:focus{
+  outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+

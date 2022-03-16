@@ -1,0 +1,25 @@
+// google font 
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700;900&display=swap');
+
+
+// config
+@import 'config/variables';
+@import 'config/reboot';
+@import 'config/sass-mq';
+@import 'config/mixins';
+
+// utilities
+@import 'utilities/gap';
+
+// component
+@import 'component/animation';
+@import 'component/hamburger';
+@import 'component/line';
+@import 'component/loading';
+@import 'component/modal';
+@import 'component/nav';
+@import 'component/scolltop';
+@import 'component/swiper';
+
+// layout
+@import 'layout/footer';

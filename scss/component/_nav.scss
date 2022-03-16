@@ -1,0 +1,9 @@
+.nav {
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform .3s,visibility .3s;
+  &.is-active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}

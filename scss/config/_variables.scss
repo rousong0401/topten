@@ -1,0 +1,33 @@
+// 色系
+$primary: #004A4F;
+$secondary: '#00333E';
+$danger: #dc3545;
+$warning: #D6B686;
+$green-100: #032729;
+$green-200: #00323D;
+$green-300: #BDCCCB;
+$green-400: #00333E;
+$yellow-100: #F9F3EA;
+$yellow-200: #D1A772;
+$black: #000000;
+$white: #ffffff;
+
+// 灰階，寫法nth($grayscale,第幾個顏色、css第一個位子為1，js才是0)
+$gray-100: #949494;
+
+// RWD斷點
+$mq-breakpoints: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1601
+);
+
+// GAP (自己設定參數)
+$gap: (
+  5: 1.25rem,
+  8: 2rem,
+  16: 4rem,
+  32: 8rem,
+)

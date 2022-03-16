@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="文官苑-Logo" x="-9" y="-4" width="82" height="82" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#0e3639" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-logo">
+      <rect width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#文官苑-Logo)">
+      <path id="文官苑-Logo-2" data-name="文官苑-Logo" d="M660.292,301.088a29.088,29.088,0,0,0,0-46.644Zm-34.754-46.644a29.085,29.085,0,0,0,0,46.643Zm15.917,52.368v-6.666h-13V303A28.91,28.91,0,0,0,641.455,306.812Zm2.919-6.666v6.666a28.9,28.9,0,0,0,13-3.807v-2.858Zm-2.919-44.761V248.72a28.91,28.91,0,0,0-13,3.807v2.857Zm2.919-6.665v6.665h13v-2.857A28.9,28.9,0,0,0,644.374,248.72Zm-9.749,48.507v-16.2l5.448-3.263-5.448-3.261V258.3h-6.169v38.924Zm13.661,0V282.681l-5.372-3.215-5.372,3.215v14.546Zm2.919-38.924v16.2l-5.45,3.261,5.45,3.263v16.2h6.167V258.3Zm-13.662,0V272.85l5.372,3.215,5.372-3.215V258.3Zm5.372-12.537a32,32,0,1,1-32,32A32,32,0,0,1,642.914,245.766Z" transform="translate(-610.92 -245.77)" fill="#d6b686"/>
+    </g>
+  </g>
+</svg>

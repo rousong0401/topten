@@ -1,0 +1,64 @@
+.crane-1 {
+  animation: crane-1 3.6s linear both;
+  animation-delay: 1s;
+}
+
+@keyframes crane-1 {
+  0% {
+    transform: translate(-280%,-230%) rotate(30deg) scale(1.3);
+  }
+  30% {
+    transform: translate(-100%,10%) rotate(30deg) scale(1.3);
+  }
+  70% {
+    transform: translate(-50%,30%) rotate(21deg) scale(1.1);
+  }
+  80% {
+    transform: translate(0) rotate(0) scale(1);
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+  }
+}
+
+.crane-2 {
+  animation: crane-2 3.8s linear both;
+  animation-delay: 1s;
+}
+
+@keyframes crane-2 {
+  0% {
+    transform: translate(-325%,-230%) rotate(30deg) scale(1.5);
+  }
+  30% {
+    transform: translate(-100%,10%) rotate(30deg) scale(1.5);
+  }
+  70% {
+    transform: translate(-50%,30%) rotate(21deg) scale(1.2);
+  }
+  80% {
+    transform: translate(0) rotate(0) scale(1);
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+  }
+}
+
+.mouse {
+  animation: mouse 1.5s linear infinite;
+}
+
+@keyframes mouse {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+  }
+}

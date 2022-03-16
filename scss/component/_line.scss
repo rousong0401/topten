@@ -1,0 +1,9 @@
+.line {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, $warning 0%, $warning 50%, transparent 50%);
+  background-size: 15px;
+  background-repeat: repeat-x;
+}
